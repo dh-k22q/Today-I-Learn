@@ -1,0 +1,35 @@
+//클래스명 Myinfo
+public class Myinfo {
+    //number 변수를 private하게 바꿈
+    private int number;
+    
+    //기본 생성자
+    public Myinfo() {
+
+    }
+    
+    //생성자
+    public Myinfo(int number) {
+        //number가 private이기 때문에 this를 활용하여 가져옴
+        this.number = number;
+    }
+    
+     //Setter 인스턴스변수를 대입하거나 수정(변수이름 앞에 set/변수이름 맨앞 대문자)
+    public void setNumber(int number) {
+      //number의 범위를 설정해줄수 있음
+      if (number < 1 || number > 10) {
+      throw new Argument();
+    }
+        this.number = number;
+    }
+    
+    //getter 인스턴스변수를 반환(변수이름 앞에 get/변수이름 맨앞 대문자)
+    public int getNumber() {
+
+        return this.number;
+    }
+    
+    <getter와 setter의 장점>
+    1. 변수를 private으로 바꿔 아무나 점근하지 못하게 한다는것
+    2. set를 사용해 데이터값을 기준에 맞게 강제할 수 있다는 점
+        (private이기에 getter가 필연적으로 같이 사용됨)
