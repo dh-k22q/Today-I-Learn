@@ -1,0 +1,7 @@
+@Valid을 사용하려 했으나 적용이 안되서 찾아보니 의존성을 추가하라고 했다.
+
+implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+gradle은 위 문장을 넣으면 된다고 하는데 어디에 넣어야하는지를 몰라서 한참을 헤맸다.
+알고보니 가장 위폴더(src폴더가 들어있는 폴더)에 있는 build.gradle파일에 들어가서
+dependencies 란에 추가해주고 인텔리제이를 재실행 해주었더니 제대로 적용이 되었다.
