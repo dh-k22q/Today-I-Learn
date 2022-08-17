@@ -1,0 +1,26 @@
+lombok을 사용하여 어노테이션 중 
+@NoArgsConstructor @AllArgsConstructor @RequiredArgsConstructor 가 있다
+@NoArgsConstructor는 파라미터가 없는 기본생성자를 생성해준다.
+@AllArgsConstructor는 모든 필드값을 파라미터로 받는 생성자를 만든다.
+@RequiredArgsConstructor는 final이나 @nonNull인 필드값만 파라미터로 받는 생성자를 만든다.
+
+예를 들어
+
+@NoArgsConstructor
+@RequiredArgsConstructor
+@AllArgsConstructor
+public class Post {
+
+  private final Long id;
+  
+  @NonNull
+  private String name;  
+ 
+  private int age;
+  
+}
+
+Post post1 = new Post(); //@NoArgsConstructor
+Post post2 = new Post(id1,name1,age1); //@AllArgsConstructor
+Post post3 = new Post(id2,nmae2); //@RequiredArgsConstructor
+위의 예시처럼 받게된다. age1은 int값이니 1111같은 숫자로 들어오게 된다.
