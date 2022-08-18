@@ -1,0 +1,5 @@
+@MappedSuperclass는 공통 매핑 정보가 필요할 때 사용된다.
+주로 생성자, 생성시간, 수정자, 수정시간 등 모든 엔티티에서 공통으로 가져가야하는 상황에서 사용된다.
+@Entity는 @MappedSuperclass를 상속받으며, @MappedSuperclass가 선언된 클래스는 엔티티가 아니고 테이블과 매핑도 안되고 조회나 검색도 불가능하다.
+단순히 상속한 자식클래스에 매핑 정보만 제공가능하다.
+JPA에서는 @Entity클래스는 @Entity나 @MappedSuperclass로 지정된 클래스만 상속할 수 있다.
